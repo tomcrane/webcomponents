@@ -10,9 +10,13 @@
         #mf { width: 400px; }
         #th { width:220px; border-right: 1px solid #999; margin: 5px; float:left; height:98%; overflow-y:scroll; }  
         #th img { max-width:90px;}      
-        #main { margin-top:30px; margin-left:10px; float:left; height:90%;} 
+        #main { margin:10px; float:left; height:98%; width:calc(98% - 240px);} 
         .tc { display: inline-block; padding:5px; cursor: pointer; }
-        #cp { height:98%; }
+        #cp { height:98%; width:100%; float:left; }
+        #textPanel { border:1px solid blueviolet; 
+            float:left; margin-left:10px; height:calc(98% - 16px); 
+            font-size: 11px; padding:8px;
+            overflow-y: scroll}
     </style>
 </head>
 <body>
@@ -20,10 +24,12 @@
     <div>    
         <input id="mf" type="text" value="https://tomcrane.github.io/webcomponents/wunder.json" />
         <input id="go" type="button" value="Go" />
+        <input id="showText" type="checkbox" /> <label for="showText">Show text</label> 
     </div>    
     <div id="viewer">    
         <div id="th"></div><div id="main">
             <div is="canvas-panel-2" id="cp" class="canvaspanel"></div>
+            <div id="textPanel" class="text">Text goes here.</div>
         </div>
     </div>
     <script type="module">    
@@ -34,15 +40,35 @@
 
         function $(id){ return document.getElementById(id) };
         let manifest = null;
+        let canvas = null;
         let options = {
             default_lang: "en",
             deref_links: false
         }
 
         function clickThumbnail(){ 
-            $('cp').canvas = manifest.items[this.getAttribute('data-uri')]; 
+            canvas = manifest.items[this.getAttribute('data-uri')];
+            $('cp').canvas = canvas; 
+            displayText();
         };
 
+        async function displayText(){
+            console.log("toggle text");
+            if($('showText').checked){
+                $('textPanel').style.display = "";
+                $('cp').style.width = "50%";
+                $('textPanel').style.width = "45%";
+                let text = await helpers.getTextForCanvasAsHtml(canvas);
+                if(text){
+                    $('textPanel').innerHTML = text;
+                } else {                    
+                    $('textPanel').innerHTML = "<p><i>(No text available)</i></p>";
+                }
+            } else {
+                $('textPanel').style.display = "none";
+                $('cp').style.width = "100%";
+            }
+        }
 
         async function go(){            
             let response = await fetch($('mf').value);
@@ -61,9 +87,25 @@
             $('im0').click();
         }
 
-        $('go').onclick=go;
+        $('go').onclick = go;
+        $('showText').onclick = displayText;
         go();
 
     </script>
+
+    
+<h2>Viewer</h2>
+<p>Requirements:</p>
+<ul>
+    <li>Allow navigation by thumbnails</li>
+    <li>Display text transcriptions alongside</li>
+    <li>Render any hyperlinking annotations</li> 
+</ul>
+<p>Event model for hyperlinking:
+    <ul>
+        <li>By default just render them as links and let the be active</li>
+        <li>Consumer can intercept link clicked event, handle it, cancel it, do something else.</li>
+    </ul>
+</p>
 </body>
 </html>

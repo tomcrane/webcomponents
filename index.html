@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas panel 1</title>
+    <link href="style-common.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h2>Canvas Panel Developer Narrative - Intro</h2>
+
+    <p>Intro | <a href="cp1.html">Version 1</a> | <a href="cp2.html">Version 2</a> | <a href="viewer1.html">Viewer 1</a></p>
+
+    <p>This is a series of experiments to get a feel for what Canvas Panel actually is.</p>
+
+    <p>I think that there are many components in evidence at
+        <a href="https://canvas-panel.digirati.com/styleguide/">https://canvas-panel.digirati.com/styleguide/</a>,
+        above and below the level of Canvas Panel. I think that the component I'm looking for is somewhere
+        around the level of <i>CanvasRepresentation</i> in the current implementation. That doesn't mean that I
+        wouldn't use all those other components in putting an application together - as we have done with V&A etc.
+    </p>
+
+    <p>But if I want a super-powerful canvas renderer outside of any particular set of tools or framework, that
+        will do the really hard scene evaluation and rendering, what are its interfaces? How do I program against it?
+    </p>
+
+    <p>The questions I'm trying to answer are:</p>
+
+    <ul>
+        <li>What did I want CP to do for me?</li>
+        <li>What did I want to manage myself?</li>
+        <li>How does it collaborate with other libraries?</li>
+    </ul>
+
+    <p>In other words, can we be sure that our code is in the right places?</p>
+
+    <p>This uses a couple of implementations of something called Canvas Panel that don't really do much. You'll have to
+        imagine that this component is offering a nice deep zoom interface, is capable of rendering AV,
+        is capable of being given annotations to render, fires events as the user interacts, etc.
+
+        This is an exercise in determining the boundaries and how the component feels right when used in many different
+        frameworks.
+        I've made CP a web component, as a simple way of encapsulating it. Obviously this demo is not a good cross
+        browser solution,
+        but again I'm more concerned with the feel of coding against it, whatever <i>it</i> actually is. Making it a
+        web component made that easier to do.
+
+
+    </p>
+
+
+
+</body>
+
+</html>

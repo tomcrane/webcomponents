@@ -10,9 +10,10 @@
     <script src="cp2.js"></script>
 </head>
 <body>
+        <h2>Canvas Panel Developer Narrative - Version 2</h2>
 
-    <p><a href="cp1.html">Version 1</a> | Version 2</p>
-
+        <p><a href="/">Intro</a> | <a href="cp1.html">Version 1</a> | Version 2 | <a href="viewer1.html">Viewer 1</a></p>
+    
     
 
     <p>This example is different. The developer has taken more control of the process, including
@@ -20,6 +21,21 @@
          to CP for rendering.
     </p>
     <p>Does this suggest that these are actually two different components?</p>
+
+<xmp>
+<div is="canvas-panel-2" id="cp2" class="canvaspanel"></div>
+
+<script>
+    async function init(){
+        let response = await fetch("https://tomcrane.github.io/webcomponents/wunder.json");
+        let manifest = await response.json();
+        // manifest = p3Normaliser.normalise(manifest);  // if we're not sure...
+        cp2 = document.getElementById("cp2");
+        cp2.canvas = manifest.items[8];
+    }        
+    init();
+</script>
+</xmp>
 
     <div is="canvas-panel-2" id="cp2" class="canvaspanel"></div>
 
@@ -30,8 +46,7 @@
             // manifest = p3Normaliser.normalise(manifest);  // if we're not sure...
             cp2 = document.getElementById("cp2");
             cp2.canvas = manifest.items[8];
-        }
-        
+        }        
         init();
     </script>
 
