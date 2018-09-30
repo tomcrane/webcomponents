@@ -6,13 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        .cp {
+        .canvaspanel {
             width: 600px;
             height: 600px;
+            padding:2px;
+            border:1px solid green;
+            background-color:black;
         }
     </style>
     <script src="cp1.js"></script>
-    <script src="cp2.js"></script>
+    <!-- <script src="cp2.js"></script> -->
 </head>
 <body>
 
@@ -31,7 +34,7 @@
         
         Or do I react to what CP finds on the canvas?
     </p>
-    <div is="canvas-panel-1" id="cp1" class="cp"
+    <div is="canvas-panel-1" id="cp1" class="canvaspanel"
         data-canvas-uri="https://wellcomelibrary.org/iiif/b18035723/canvas/c8"
         data-partof-uri="https://tomcrane.github.io/webcomponents/wunder.json">
     </div>
@@ -50,8 +53,8 @@
          to CP for rendering.
     </p>
     <p>Does this suggest that these are actually two different components?</p>
-
-    <div is="canvas-panel-2" id="cp2" class="cp"></div>
+<!-- 
+    <div is="canvas-panel-2" id="cp2" class="canvaspanel"></div>
 
     <script>
         let response = await fetch("https://tomcrane.github.io/webcomponents/wunder.json");
@@ -59,7 +62,7 @@
         // manifest = p3Normaliser.normalise(manifest);  // if we're not sure...
         cp2 = document.getElementById("cp2");
         cp2.canvas = manifest.items[8];
-    </script>
+    </script> -->
 
     <p>So are we dealing with two components here? 
         This is more like the existing react.
