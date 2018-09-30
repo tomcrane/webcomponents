@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas panel 2</title>    
+    <link href="style-common.css" rel="stylesheet">
+    <script src="cp-common.js"></script>
+    <script src="cp2.js"></script>
+</head>
+<body>
+
+    <p><a href="cp1.html">Version 1</a> | Version 2</p>
+
+    
+
+    <p>This example is different. The developer has taken more control of the process, including
+        the loading of resources. Obtaining and traversing IIIF resources is done before passing
+         to CP for rendering.
+    </p>
+    <p>Does this suggest that these are actually two different components?</p>
+
+    <div is="canvas-panel-2" id="cp2" class="canvaspanel"></div>
+
+    <script>
+        async function init(){
+            let response = await fetch("https://tomcrane.github.io/webcomponents/wunder.json");
+            let manifest = await response.json();
+            // manifest = p3Normaliser.normalise(manifest);  // if we're not sure...
+            cp2 = document.getElementById("cp2");
+            cp2.canvas = manifest.items[8];
+        }
+        
+        init();
+    </script>
+
+    <p>So are we dealing with two components here? 
+        This is more like the existing react.
+        But... the existing react needs to stop at the point it enters the canvas.
+    </p>
+    
+    <p>Navigation components aren't canvas panel.
+        They are part of the set of tools and components around CP.
+
+        Just as CP has components under it.
+        But the developer using CP doesn't necessarily have to see the components under it.
+    </p>
+</body>
+</html>

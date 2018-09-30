@@ -1,0 +1,69 @@
+<html>
+<head>
+    <title>CP Viewer</title>
+    <link href="style-common.css" rel="stylesheet">
+    <script src="https://unpkg.com/iiif-prezi2to3/umd/iiif-prezi2to3.js"></script>
+    <script src="cp-common.js"></script>
+    <script src="cp2.js"></script>
+    <style>
+        #viewer { height:60%; border:2px solid salmon; margin:10px;}
+        #mf { width: 400px; }
+        #th { width:220px; border-right: 1px solid #999; margin: 5px; float:left; height:98%; overflow-y:scroll; }  
+        #th img { max-width:90px;}      
+        #main { margin-top:30px; margin-left:10px; float:left; height:90%;} 
+        .tc { display: inline-block; padding:5px; cursor: pointer; }
+        #cp { height:98%; }
+    </style>
+</head>
+<body>
+    <h1>Viewer using normaliser, helpers and CanvasPanel</h1>
+    <div>    
+        <input id="mf" type="text" value="https://tomcrane.github.io/webcomponents/wunder.json" />
+        <input id="go" type="button" value="Go" />
+    </div>    
+    <div id="viewer">    
+        <div id="th"></div><div id="main">
+            <div is="canvas-panel-2" id="cp" class="canvaspanel"></div>
+        </div>
+    </div>
+    <script type="module">    
+        // This JUST gets the model to a consistent P3 state
+        import { normalise } from "./normaliser.js" 
+        // And this provides all the helpers, decorators and utitlity functions on top of the model.
+        import * as helpers from './helpers.js';
+
+        function $(id){ return document.getElementById(id) };
+        let manifest = null;
+        let options = {
+            default_lang: "en",
+            deref_links: false
+        }
+
+        function clickThumbnail(){ 
+            $('cp').canvas = manifest.items[this.getAttribute('data-uri')]; 
+        };
+
+
+        async function go(){            
+            let response = await fetch($('mf').value);
+            let raw_manifest = await response.json();      
+            manifest = normalise(raw_manifest, options);      
+            $('th').innerHTML="";
+            let s = "";
+            manifest.items.forEach(function(cv,i){
+                s += '<div class="tc">' + helpers.getString(cv.label) + '<br/>';
+                s += '<img id="im' + i + '" data-uri="' + i + '" src="' + helpers.getThumbnail(cv) + '" /></div>';            
+            });
+            $('th').innerHTML = s;
+            document.querySelectorAll('#th img').forEach(function(th){
+                th.addEventListener('click', clickThumbnail)
+            });
+            $('im0').click();
+        }
+
+        $('go').onclick=go;
+        go();
+
+    </script>
+</body>
+</html>

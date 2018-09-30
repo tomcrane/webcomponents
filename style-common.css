@@ -1,0 +1,15 @@
+body {
+    font-family: sans-serif;
+}
+
+p {
+    max-width: 600px;
+}
+
+.canvaspanel {
+    width: 600px;
+    height: 600px;
+    padding:2px;
+    border:1px solid green;
+    background-color:black;
+}

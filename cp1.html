@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas panel 1</title>
+    <link href="style-common.css" rel="stylesheet">
+    <script src="cp-common.js"></script>
+    <script src="cp1.js"></script>
+</head>
+
+<body>
+
+    <p>Version 1 | <a href="cp2.html">Version 2</a></p>
+
+    <p>In this type of usage, CP is entirely declarative. It needs to go off and load things uder the hood.
+        In this case it will need to load the manifest, then find the canvas in it, then
+
+        To be useful for people who want to do this, CP needs to have all the normalisation to P3 built in.
+
+        The crucial thing is, I don't know what's on this canvas.
+        I don't even know if it has an image, image with tilesource, multiple images, Choice,
+        Audio, Video, text.
+
+        As my viewer gets more sophisticated, I might want to deal with more stuff.
+        But do I work out what the stuff is, outside of CP?
+
+        Or do I react to what CP finds on the canvas?
+    </p>
+    <div is="canvas-panel-1" id="cp1" class="canvaspanel" 
+        data-canvas-uri="https://wellcomelibrary.org/iiif/b18035723/canvas/c8"
+        data-partof-uri="https://tomcrane.github.io/webcomponents/wunder.json">
+    </div>
+
+    <p>I haven't written any code here to respond to anything on that canvas that might need
+        a user interaction...
+        Like Choice. Or a hyperlinking annotation... what should that do?
+
+        Bubble up.
+
+    </p>
+    <hr />
+
+    <div is="canvas-panel-1" id="cp1" class="canvaspanel" 
+        data-canvas-uri="https://wellcomelibrary.org/iiif/b22047347/canvas/c24"
+        data-partof-uri="https://tomcrane.github.io/webcomponents/wunder.json">
+    </div>
+
+
+</body>
+
+</html>
