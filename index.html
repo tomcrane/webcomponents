@@ -15,44 +15,46 @@
 
     <p>Intro | <a href="cp1.html">Version 1</a> | <a href="cp2.html">Version 2</a> | <a href="viewer1.html">Viewer 1</a></p>
 
-    <p>This is a series of experiments to get a feel for what Canvas Panel actually is.</p>
+    <p>This is a series of experiments to get a feel for what Canvas Panel (CP) actually is, by attempting to build some
+        simple viewing experiences and seeing where the code wants to go.</p>
 
     <p>I think that there are many components in evidence at
         <a href="https://canvas-panel.digirati.com/styleguide/">https://canvas-panel.digirati.com/styleguide/</a>,
         above and below the level of Canvas Panel. I think that the component I'm looking for is somewhere
-        around the level of <i>CanvasRepresentation</i> in the current implementation. That doesn't mean that I
-        wouldn't use all those other components in putting an application together - as we have done with V&A etc.
+        around the level of <i><a href="http://canvas-panel.digirati.com/styleguide/#canvasrepresentation">CanvasRepresentation</a></i>
+        or <i><a href="http://canvas-panel.digirati.com/styleguide/#viewport">Viewport</a></i> in the current
+        implementation. That doesn't mean that I
+        wouldn't use all those other components in putting an application together - as we have done with
+        CanvasPanel-based viewing experiences for V&amp;A and Galway.
     </p>
 
-    <p>But if I want a super-powerful canvas renderer outside of any particular set of tools or framework, that
-        will do the really hard scene evaluation and rendering, what are its interfaces? How do I program against it?
+    <p>But if I want a multipurpose canvas renderer outside of any particular set of tools or frameworks, that
+        will do the heavy lifting of scene evaluation and rendering, what are its interfaces? How do I program against it?
     </p>
 
     <p>The questions I'm trying to answer are:</p>
 
     <ul>
-        <li>What did I want CP to do for me?</li>
-        <li>What did I want to manage myself?</li>
-        <li>How does it collaborate with other libraries?</li>
+        <li>What do I want CP to do for me?</li>
+        <li>What do I want to manage myself?</li>
+        <li>How does CP collaborate with other libraries?</li>
+        <li>What other components and/or libraries do I need to build things quickly?</li>
     </ul>
 
     <p>In other words, can we be sure that our code is in the right places?</p>
 
-    <p>This uses a couple of implementations of something called Canvas Panel that don't really do much. You'll have to
-        imagine that this component is offering a nice deep zoom interface, is capable of rendering AV,
-        is capable of being given annotations to render, fires events as the user interacts, etc.
+    <p>Rather than use the real CanvasPanel, I have a definitely less than MVP CanvasPanel implementation, as a web component. 
+         You'll have to imagine that this component is offering a nice deep zoom interface, is capable of rendering AV,
+        is capable of being given annotations to render, fires events as the user interacts, and so on.
+        This is an exercise in determining the boundaries of the component - what do I need to know about how it works inside, where does the black box begin?</p>
 
-        This is an exercise in determining the boundaries and how the component feels right when used in many different
-        frameworks.
-        I've made CP a web component, as a simple way of encapsulating it. Obviously this demo is not a good cross
-        browser solution,
-        but again I'm more concerned with the feel of coding against it, whatever <i>it</i> actually is. Making it a
-        web component made that easier to do.
+        <p>I've made CP a web component, because that is a simple way of encapsulating it to think about how I would want to code against it. Obviously this demo is not a good cross browser solution, there are no polyfills or any concessions to old browsers. I know that it works in Chrome on my machine and probably in Chrome on yours too. </p>
 
 
-    </p>
+        <p>On to <a href="cp1.html">Version 1</a>.</p>
 
-
+        <hr/>
+        <p><a href="https://github.com/tomcrane/webcomponents">View on GitHub</a></p>
 
 </body>
 

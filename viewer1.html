@@ -21,6 +21,7 @@
 </head>
 <body>
     <h1>Viewer using normaliser, helpers and CanvasPanel</h1>
+    <p><a href=".">Intro</a> | <a href="cp1.html">Version 1</a> | <a href="cp2.html">Version 2</a> | Viewer 1</p>
     <div>    
         <input id="mf" type="text" value="https://tomcrane.github.io/webcomponents/wunder.json" />
         <input id="go" type="button" value="Go" />
@@ -33,31 +34,43 @@
         </div>
     </div>
     <script type="module">    
+
         // This JUST gets the model to a consistent P3 state
         import { normalise } from "./normaliser.js" 
-        // And this provides all the helpers, decorators and utitlity functions on top of the model.
+    
+        // And this provides all the helpers, decorators and utility functions on top of the model.
         import * as helpers from './helpers.js';
 
+        // wrap element retrieval in $(..) for brevity 
         function $(id){ return document.getElementById(id) };
+    
+        // keep module-level references to the IIIF resources we're interested in
         let manifest = null;
         let canvas = null;
+
+        // define the options we want to use when calling the normaliser
         let options = {
             default_lang: "en",
             deref_links: false
         }
 
+        // when someone clicks a thumbnail, get that thumbnail's canvas from the manifest,
+        // pass it to Canvas Panel, and render any text for that canvas.
         function clickThumbnail(){ 
             canvas = manifest.items[this.getAttribute('data-uri')];
             $('cp').canvas = canvas; 
             displayText();
         };
 
+        // if the checkbox is checked, adjust the UI to accommodate the text panel,
+        // fetch the HTML representation of a canvas's textual content (a very good 
+        // candidate for a helper method) and display it in the panel.
         async function displayText(){
-            console.log("toggle text");
             if($('showText').checked){
                 $('textPanel').style.display = "";
                 $('cp').style.width = "50%";
                 $('textPanel').style.width = "45%";
+                // example of a nice helper method a library could provide
                 let text = await helpers.getTextForCanvasAsHtml(canvas);
                 if(text){
                     $('textPanel').innerHTML = text;
@@ -69,38 +82,105 @@
                 $('cp').style.width = "100%";
             }
         }
-
-        async function go(){            
+        
+        // Initialisation function
+        async function init(){    
+            
+            // fetch the manifest as JSON         
             let response = await fetch($('mf').value);
-            let raw_manifest = await response.json();      
-            manifest = normalise(raw_manifest, options);      
+            let raw_manifest = await response.json();
+            
+            // normalise it
+            manifest = normalise(raw_manifest, options);
+            
+            // build the thumbnails UI (later, optimise this to 
+            // only load images for on-screen thumbs)
             $('th').innerHTML="";
             let s = "";
             manifest.items.forEach(function(cv,i){
-                s += '<div class="tc">' + helpers.getString(cv.label) + '<br/>';
-                s += '<img id="im' + i + '" data-uri="' + i + '" src="' + helpers.getThumbnail(cv) + '" /></div>';            
+                // some more nice helper methods:
+                let thumb = helpers.getThumbnail(cv);
+                let label = helpers.getString(cv.label);
+                s += `<div class="tc">${label}<br/><img id="im${i}" data-uri="${i}" src="${thumb}" /></div>`;         
             });
             $('th').innerHTML = s;
+            
+            // attach a click handler to each thumbnail
             document.querySelectorAll('#th img').forEach(function(th){
                 th.addEventListener('click', clickThumbnail)
             });
+
+            // click the first thumb to open the manifest on the first canvas
             $('im0').click();
         }
 
-        $('go').onclick = go;
+        // wire up the init function to the button, for when the user loads a new manifest
+        $('go').onclick = init;
+
+        // toggle the text on and off
         $('showText').onclick = displayText;
-        go();
+
+        // launch!!
+        init();
 
     </script>
 
-    
-<h2>Viewer</h2>
-<p>Requirements:</p>
+    <p>This viewer is a bit clunky. The simple CP implementation doesn't react to resizing very well. 
+        But gloss over that for now.</p>
+
+<p>Here are my requirements:</p>
 <ul>
     <li>Allow navigation by thumbnails</li>
     <li>Display text transcriptions alongside</li>
-    <li>Render any hyperlinking annotations</li> 
+    <li><i>Render any hyperlinking annotations and allow my code to intercept them</i></li>
+    <li><i>Support multiple image annotations on the canvas</i></li>
+    <li><i>Support oa:Choice</i></li> 
 </ul>
+
+<p>It feels like the first two can be tackled quite easily in my bespoke viewer code, without leaning
+    on Canvas Panel. But the other requirements are going to need some interaction, some collaboration between
+    CP and my code, so I'll leave them for a while.
+</p>
+
+<p>How does this work? This starts to demonstrate the roles of two essential libraries, and also the separation of concerns across those two libraries.</p>
+<p>
+    I need to be able to normalise any IIIF resources to spec-perfect Presentation 3, because the CP developers don't want to deal with the vagaries of IIIF in the wild. CP only accepts <i>Perfect P3</i>. I want to be forgiving of different versions of the specs, not to mention sloppy implementation of any of the versions. But I want a library to fix everything up for me. This makes it easier for me to code against, as P3 is much friendlier to JavaScript developers. Its data sturctures are consistent and feel like regular JSON, <i>pretty much</i>. Whenever I get IIIF, I normalise it. Then I need only refer to the latest P3 spec to understand what I'm dealing with.
+</p>
+
+<p>I also need a battery of helpers and utilities. The IIIF representation is a big data structure, it doesn't have functions I can call on to extract useful things. For example, given a IIIF resource, I want to call <code>getThumbnail(..)</code> with some options to generate a suitable thumbnail for use in my UI. These functions live in a helper library.</p>
+
+<p>If I always normalise to <i>Perfect P3</i> before I do anything else, then my helper library only needs to support <i>Perfect P3</i>. And I only need to understand one spec.</p>
+
+<p>The Manifesto library does both of these tasks. But I want to split them up. Sometimes, I might not want to load any helpers because I don't need to do anything particularly complex (as in the Viewer1 example). Sometimes, I might be in a Perfect P3 environment already, and I don't need to normalise.</p>
+
+<p>This particular viewer needs both. So I have stub implementations of both to bring in:</p>
+
+<xmp>
+ <script type="module">    
+
+    // This JUST gets the model to a consistent P3 state
+    import { normalise } from "./normaliser.js" 
+
+    // And this provides all the helpers, decorators 
+    // and utility functions on top of the model.
+    import * as helpers from './helpers.js';
+
+    // ...
+
+ </script>
+
+</xmp>
+
+TODO
+
+Walk through how code builds the viewer.
+
+Discuss how await helpers.getTextForCanvasAsHtml(canvas); has a dependency on normalisation too.
+
+See comments in helpers.js
+
+<p></p>
+
 <p>Event model for hyperlinking:
     <ul>
         <li>By default just render them as links and let the be active</li>

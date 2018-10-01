@@ -13,3 +13,9 @@ p {
     border:1px solid green;
     background-color:black;
 }
+
+xmp {
+    background-color: lightgray;
+    max-width: 600px;
+    border-radius: 10px;
+}

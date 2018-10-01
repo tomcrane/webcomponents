@@ -12,47 +12,58 @@
 <body>
         <h2>Canvas Panel Developer Narrative - Version 2</h2>
 
-        <p><a href="/">Intro</a> | <a href="cp1.html">Version 1</a> | Version 2 | <a href="viewer1.html">Viewer 1</a></p>
+        <p><a href=".">Intro</a> | <a href="cp1.html">Version 1</a> | Version 2 | <a href="viewer1.html">Viewer 1</a></p>
     
     
 
     <p>This example is different. The developer has taken more control of the process, including
         the loading of resources. Obtaining and traversing IIIF resources is done before passing
-         to CP for rendering.
+         to CP for rendering. This CP requires a perfectly compliant Presentation 3 canvas, so I 
+         need to make sure it's in that form before I pass it in. Which means I need visibility of
+         some other libraries. For now, we'll use a manifest that I know is valid Presentation 3
     </p>
-    <p>Does this suggest that these are actually two different components?</p>
 
 <xmp>
-<div is="canvas-panel-2" id="cp2" class="canvaspanel"></div>
+ <div is="canvas-panel-2" id="cp2" class="canvaspanel"></div>
 
-<script>
+ <script>
+
     async function init(){
-        let response = await fetch("https://tomcrane.github.io/webcomponents/wunder.json");
+        let uri = "https://tomcrane.github.io/webcomponents/wunder.json"
+        let response = await fetch(uri);
         let manifest = await response.json();
-        // manifest = p3Normaliser.normalise(manifest);  // if we're not sure...
+        // manifest = normaliser.normalise(manifest); // skip for now 
         cp2 = document.getElementById("cp2");
         cp2.canvas = manifest.items[8];
-    }        
+    }     
+
     init();
-</script>
+
+ </script>
+
 </xmp>
+
+    <p>I load in a manifest, then pass the 9th canvas to Canvas Panel: </p>
 
     <div is="canvas-panel-2" id="cp2" class="canvaspanel"></div>
 
     <script>
+
         async function init(){
-            let response = await fetch("https://tomcrane.github.io/webcomponents/wunder.json");
+            let uri = "https://tomcrane.github.io/webcomponents/wunder.json"
+            let response = await fetch(uri);
             let manifest = await response.json();
-            // manifest = p3Normaliser.normalise(manifest);  // if we're not sure...
+            // manifest = normaliser.normalise(manifest); // skip for now 
             cp2 = document.getElementById("cp2");
             cp2.canvas = manifest.items[8];
-        }        
+        }     
+    
         init();
-    </script>
+    
+        </script>
 
-    <p>So are we dealing with two components here? 
-        This is more like the existing react.
-        But... the existing react needs to stop at the point it enters the canvas.
+    <p>This feels more powerful. I can use the version 1 wrapper around CP to embed fragments, but 
+        with this approach I can start to build viewers.
     </p>
     
     <p>Navigation components aren't canvas panel.
@@ -61,5 +72,11 @@
         Just as CP has components under it.
         But the developer using CP doesn't necessarily have to see the components under it.
     </p>
+    
+    
+    <p>Now build a simple <a href="viewer1.html">Viewer</a>.</p>
+
+    <hr/>
+    <p><a href="https://github.com/tomcrane/webcomponents">View on GitHub</a></p>
 </body>
 </html>
