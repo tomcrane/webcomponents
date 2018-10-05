@@ -1,5 +1,7 @@
 body {
-    font-family: sans-serif;
+    font-family: system-ui,Arial,Helvetica,sans-serif;
+    line-height: 1.6em;
+    margin-left: 10vw;
 }
 
 p {
@@ -14,8 +16,6 @@ p {
     background-color:black;
 }
 
-xmp {
-    background-color: lightgray;
+pre {
     max-width: 600px;
-    border-radius: 10px;
 }

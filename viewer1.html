@@ -1,12 +1,14 @@
 <html>
 <head>
-    <title>CP Viewer</title>
-    <link href="style-common.css" rel="stylesheet">
+    <title>Digirati Canvas Panel - Developer Stories Viewer 1</title>
+    <link rel="stylesheet" href="style-common.css">
+    <link rel="stylesheet" href="highlight/styles/github.css">
+    <script src="highlight/highlight.pack.js"></script>
     <script src="https://unpkg.com/iiif-prezi2to3/umd/iiif-prezi2to3.js"></script>
     <script src="cp-common.js"></script>
     <script src="cp2.js"></script>
     <style>
-        #viewer { height:60%; border:2px solid salmon; margin:10px;}
+        #viewer { height:60%; border:2px solid salmon; margin:10px; margin-left:-9vw}
         #mf { width: 400px; }
         #th { width:220px; border-right: 1px solid #999; margin: 5px; float:left; height:98%; overflow-y:scroll; }  
         #th img { max-width:90px;}      
@@ -16,7 +18,8 @@
         #textPanel { border:1px solid blueviolet; 
             float:left; margin-left:10px; height:calc(98% - 16px); 
             font-size: 11px; padding:8px;
-            overflow-y: scroll}
+            overflow-y: scroll;
+            line-height: 1.2em;}
     </style>
 </head>
 <body>
@@ -25,10 +28,11 @@
     <div>    
         <input id="mf" type="text" value="https://tomcrane.github.io/webcomponents/wunder.json" />
         <input id="go" type="button" value="Go" />
-        <input id="showText" type="checkbox" /> <label for="showText">Show text</label> 
+        <input id="showText" type="checkbox" checked="checked" /> <label for="showText">Show text</label> 
     </div>    
     <div id="viewer">    
-        <div id="th"></div><div id="main">
+        <div id="th"></div>
+        <div id="main">
             <div is="canvas-panel-2" id="cp" class="canvaspanel"></div>
             <div id="textPanel" class="text">Text goes here.</div>
         </div>
@@ -125,22 +129,30 @@
 
     </script>
 
-    <p>This viewer is a bit clunky. The simple CP implementation doesn't react to resizing very well. 
+    <p>This viewer is a bit clunky. The pseudo-Canvas-Panel implementation doesn't react to resizing very well. 
         But gloss over that for now.</p>
 
-<p>Here are my requirements:</p>
+<p>Here are my requirements for a "book friendly" viewer. As a JavaScript developer 
+    armed with some libraries and some components, how do I go about meeting these requirements quickly?</p>
+
+    <p>How should my code, and the libraries, and the components <i>collaborate</i> to make my
+    job as a developer easy?</p>
 <ul>
     <li>Allow navigation by thumbnails</li>
-    <li>Display text transcriptions alongside</li>
+    <li>Display text transcriptions alongside the canvas</li>
     <li><i>Render any hyperlinking annotations and allow my code to intercept them</i></li>
     <li><i>Support multiple image annotations on the canvas</i></li>
     <li><i>Support oa:Choice</i></li> 
+    <li><i>Highlight the text <i>on the canvas</i> when I select it in the text panel</li> 
+    <li><i>Display text transcriptions overlaying the canvas, as an option</i></li> 
 </ul>
 
 <p>It feels like the first two can be tackled quite easily in my bespoke viewer code, without leaning
     on Canvas Panel. But the other requirements are going to need some interaction, some collaboration between
-    CP and my code, so I'll leave them for a while.
+    Canvas Panel and my code, so I'll leave them for a while.
 </p>
+
+
 
 <p>How does this work? This starts to demonstrate the roles of two essential libraries, and also the separation of concerns across those two libraries.</p>
 <p>
@@ -187,5 +199,11 @@ See comments in helpers.js
         <li>Consumer can intercept link clicked event, handle it, cancel it, do something else.</li>
     </ul>
 </p>
+
+
+<hr/>
+<p><a href="https://github.com/digirati-co-uk/canvas-panel/tree/master/developer-stories">View on GitHub</a></p>
+
+<script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>
