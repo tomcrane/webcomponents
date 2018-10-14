@@ -1,0 +1,100 @@
+<html>
+<head>
+    <title>Digirati Canvas Panel - Collaboration scenarios</title>
+    <link rel="stylesheet" href="style-common.css">
+    <link rel="stylesheet" href="highlight/styles/github.css">
+    <script src="highlight/highlight.pack.js"></script>
+    <script src="https://unpkg.com/iiif-prezi2to3/umd/iiif-prezi2to3.js"></script>
+    <script src="cp-common.js"></script>
+    <script src="cp2.js"></script>
+</head>
+<body>
+    <h1>Collaboration scenarios</h1>
+    <p><a href=".">Intro</a> | <a href="cp1.html">Version 1</a> | <a href="cp2.html">Version 2</a> | <a href="viewer1.html">Viewer 1</a> | Collaboration</p>
+    
+    <p>Revisiting the requirements, the first two have been met (with some fudging). But what about the others?</p>
+
+
+    <h3>Requirements</h3>
+    <ol>
+        <li>Allow navigation by thumbnails</li>
+        <li>Display text transcriptions alongside the canvas</li>
+        <li><i>Render any hyperlinking annotations and allow my code to intercept them</i></li>
+        <li><i>Support multiple image annotations on the canvas</i></li>
+        <li><i>Support oa:Choice</i></li> 
+        <li><i>Highlight the text on the canvas when I select it in the text panel</i></li> 
+        <li><i>Display text transcriptions overlaying the canvas, as an option</i></li> 
+    </ol>
+
+    <p>In this section I will take a look at requirements 3-7.</p>
+
+    <h2>Hyperlinking</h2>
+    <p>IIIF has great potential to encourage the extension of hyperlinking into the digital object. Often a digital object is presented in a black box - the viewer; the web stops at its borders and something else takes over, isolated and disconnected. IIIF makes the digital object and its parts, at any level of granularity, part of the web too. The markup of the web page gives way to a more specialised but in fact simpler markup: the IIIF Presentation model. That model is an assembly of web standards, we don't need to leave hyperlinks at the door.</p>
+
+    <p>Some examples of hyperlinking in IIIF:</p>
+    <ul>
+        <li><a href="https://galway-viewer.digirati.com/#?canvas=https://iiif.library.nuigalway.ie/manifests/p135/canvas/p135_memoir_001.tif.json">The Galway Viewer</a> (built using current version of Canvas Panel). The links point to other IIIF resources, but rather than link directly the viewer shows a preview of the target resource. This is because we want to treat the orginal IIIF resource (the memoir) as an anchor point for the rest of the archive. <a href="https://github.com/digirati-co-uk/nui-galway-viewer/blob/master/implementation.md#model---linking">Further discussion of linking model</a>.</li>
+        <li><a href="https://chronicle250.com/1982#catalogue">Chronicle 250: The Royal Academy Summer Exhibition</a>. In this example, artist names in the catalogue link to their index entries, for further exploration.</li>
+        <li><a href="https://medium.com/@tom.crane/beyond-the-viewer-fragments-and-links-in-annotation-space-b3284e25f34">Beyond the Viewer</a> includes a section at the end on "hyperlinking the archive".</li>
+    </ul>
+    <p>
+        A hyperlink in IIIF is just an annotation with the motivation <code>linking. At its simplest it could be a link from a region of a canvas, to another manifest:</code>
+    </p>
+
+    
+<pre><code class="json">
+{
+    "id": "http://example.org/linking-anno",
+    "type": "Annotation",
+    "motivation": "linking",
+    "label": "Click me",
+    "body": {
+        "id": "https://example.org/manifest1",
+        "type" "Manifest"
+    },
+    "target": "http://example.org/canvas1#xywh=1000,1000,400,50"
+}
+</code></pre>
+
+<p>Sometimes you might want to link from a region of one canvas in one work to a region of another canvas in another work. This needs a bit more information:</p>
+
+<pre><code class="json">
+{
+    "id": "http://example1.org/linking-anno",
+    "type": "Annotation",
+    "motivation": "linking",
+    "body": {
+        "id": "http://example2.org/canvas1#xywh=300,300,400,400",
+        "type": "Canvas",
+        "partOf": {
+            "id": "https://example2.org/manifest1",
+            "type" "Manifest"
+        }
+    },
+    "target": {
+        "id": "http://example1.org/canvas1#xywh=1000,1000,400,50"
+        "type": "Canvas",
+        "partOf": {
+            "id": "https://example1.org/manifest1",
+            "type" "Manifest"
+        }
+    }
+}
+</code></pre>
+           
+<p>Neither the W3C or IIIF specifications describe what the user experience of such </p>
+<p>Event model for hyperlinking:
+        <ul>
+            <li>By default just render them as links and let the be active</li>
+            <li>Consumer can intercept link clicked event, handle it, cancel it, do something else.</li>
+        </ul>
+    </p>
+
+        
+    <hr/>
+    <p><a href="https://github.com/digirati-co-uk/canvas-panel/tree/master/developer-stories">View on GitHub</a></p>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>

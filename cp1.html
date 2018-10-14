@@ -17,12 +17,20 @@
 
     <h2>Canvas Panel Developer Narrative - Version 1</h2>
 
-    <p><a href=".">Intro</a> | Version 1 | <a href="cp2.html">Version 2</a> | <a href="viewer1.html">Viewer 1</a></p>
+    <p><a href=".">Intro</a> | Version 1 | <a href="cp2.html">Version 2</a> | <a href="viewer1.html">Viewer 1</a> | <a href="collaboration.html">Collaboration</a></p>
 
-<p><i>Design principle:</i> work against the latest IIIF specification (Presentation 3) and 
+<p>First, a <i>Design principle</i> for Canvas Panel: </p>
+    
+    <blockquote>
+    Work with the latest IIIF specification (Presentation 3) and 
     <b><i>normalise</i></b> incoming resources to this specification, rather than 
-    accommodating different versions of the spec throughout the codebase. 
-    That would require conditional behaviour throughout.</p>
+    accommodating different versions of the spec throughout the codebase.
+</blockquote> 
+
+<blockquote>
+    Canvas Panel is to a IIIF Canvas as OSD is to a deep zoom tile source. 
+    (This principle doesn't quite hold; you can pass multiple tile sources to OSD).
+</blockquote>
 
 
 <p>This is how I would want to use CP. I want it to behave like a <code>div</code>, 

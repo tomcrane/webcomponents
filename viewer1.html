@@ -24,7 +24,7 @@
 </head>
 <body>
     <h1>Viewer using normaliser, helpers and CanvasPanel</h1>
-    <p><a href=".">Intro</a> | <a href="cp1.html">Version 1</a> | <a href="cp2.html">Version 2</a> | Viewer 1</p>
+    <p><a href=".">Intro</a> | <a href="cp1.html">Version 1</a> | <a href="cp2.html">Version 2</a> | Viewer 1 | <a href="collaboration.html">Collaboration</a></p>
     <div>    
         <input id="mf" type="text" value="https://tomcrane.github.io/webcomponents/wunder.json" />
         <input id="go" type="button" value="Go" />
@@ -61,7 +61,7 @@
         // when someone clicks a thumbnail, get that thumbnail's canvas from the manifest,
         // pass it to Canvas Panel, and render any text for that canvas.
         function clickThumbnail(){ 
-            canvas = manifest.items[this.getAttribute('data-uri')];
+            canvas = manifest.items[this.getAttribute('data-index')];
             $('cp').canvas = canvas; 
             displayText();
         };
@@ -75,9 +75,9 @@
                 $('cp').style.width = "50%";
                 $('textPanel').style.width = "45%";
                 // example of a nice helper method a library could provide
-                let text = await helpers.getTextForCanvasAsHtml(canvas);
-                if(text){
-                    $('textPanel').innerHTML = text;
+                let textAsHtml = await helpers.getTextForCanvasAsHtml(canvas);
+                if(textAsHtml){
+                    $('textPanel').innerHTML = textAsHtml;
                 } else {                    
                     $('textPanel').innerHTML = "<p><i>(No text available)</i></p>";
                 }
@@ -105,7 +105,7 @@
                 // some more nice helper methods:
                 let thumb = helpers.getThumbnail(cv);
                 let label = helpers.getString(cv.label);
-                s += `<div class="tc">${label}<br/><img id="im${i}" data-uri="${i}" src="${thumb}" /></div>`;         
+                s += `<div class="tc">${label}<br/><img id="im${i}" data-index="${i}" src="${thumb}" /></div>`;         
             });
             $('th').innerHTML = s;
             
@@ -132,20 +132,24 @@
     <p>This viewer is a bit clunky. The pseudo-Canvas-Panel implementation doesn't react to resizing very well. 
         But gloss over that for now.</p>
 
-<p>Here are my requirements for a "book friendly" viewer. As a JavaScript developer 
+<p>Here are my requirements for a "book friendly" viewer, for text-heavy resources. As a JavaScript developer 
     armed with some libraries and some components, how do I go about meeting these requirements quickly?</p>
+
+    <p>Hpw would canvas panel help me build this quickly, without dictating the visual appearance of the viewer?</p>
 
     <p>How should my code, and the libraries, and the components <i>collaborate</i> to make my
     job as a developer easy?</p>
-<ul>
+
+    <h3>Requirements</h3>
+<ol>
     <li>Allow navigation by thumbnails</li>
     <li>Display text transcriptions alongside the canvas</li>
     <li><i>Render any hyperlinking annotations and allow my code to intercept them</i></li>
     <li><i>Support multiple image annotations on the canvas</i></li>
     <li><i>Support oa:Choice</i></li> 
-    <li><i>Highlight the text <i>on the canvas</i> when I select it in the text panel</li> 
+    <li><i>Highlight the text on the canvas when I select it in the text panel</i></li> 
     <li><i>Display text transcriptions overlaying the canvas, as an option</i></li> 
-</ul>
+</ol>
 
 <p>It feels like the first two can be tackled quite easily in my bespoke viewer code, without leaning
     on Canvas Panel. But the other requirements are going to need some interaction, some collaboration between
@@ -156,50 +160,100 @@
 
 <p>How does this work? This starts to demonstrate the roles of two essential libraries, and also the separation of concerns across those two libraries.</p>
 <p>
-    I need to be able to normalise any IIIF resources to spec-perfect Presentation 3, because the CP developers don't want to deal with the vagaries of IIIF in the wild. CP only accepts <i>Perfect P3</i>. I want to be forgiving of different versions of the specs, not to mention sloppy implementation of any of the versions. But I want a library to fix everything up for me. This makes it easier for me to code against, as P3 is much friendlier to JavaScript developers. Its data sturctures are consistent and feel like regular JSON, <i>pretty much</i>. Whenever I get IIIF, I normalise it. Then I need only refer to the latest P3 spec to understand what I'm dealing with.
+    I need to be able to normalise any IIIF resources to spec-perfect Presentation 3, because the CP developers don't want to deal with the vagaries of IIIF in the wild. CP only accepts <i>Perfect P3</i>. I want to be forgiving of different versions of the specs, not to mention sloppy implementation of any of the versions. But I want a library to fix everything up for me. This makes it easier for me to code against, as P3 is much friendlier to JavaScript developers. Its data structures are consistent and feel like regular JSON, <i>pretty much</i>. Whenever I get IIIF, I normalise it. Then I need only refer to the latest P3 spec to understand what I'm dealing with.
 </p>
 
 <p>I also need a battery of helpers and utilities. The IIIF representation is a big data structure, it doesn't have functions I can call on to extract useful things. For example, given a IIIF resource, I want to call <code>getThumbnail(..)</code> with some options to generate a suitable thumbnail for use in my UI. These functions live in a helper library.</p>
 
 <p>If I always normalise to <i>Perfect P3</i> before I do anything else, then my helper library only needs to support <i>Perfect P3</i>. And I only need to understand one spec.</p>
 
+<blockquote>
+    Design principle: normalisation to P3 is one library, helpers is another. They aren't the same library.
+</blockquote>
+
 <p>The Manifesto library does both of these tasks. But I want to split them up. Sometimes, I might not want to load any helpers because I don't need to do anything particularly complex (as in the Viewer1 example). Sometimes, I might be in a Perfect P3 environment already, and I don't need to normalise.</p>
 
 <p>This particular viewer needs both. So I have stub implementations of both to bring in:</p>
 
-<xmp>
- <script type="module">    
+<pre><code class="html">&lt;script type=&quot;module&quot;&gt;        
+    // This JUST gets the model to a consistent P3 state    
+    import { normalise } from &quot;./normaliser.js&quot;     
+    // And this provides all the helpers, decorators     
+    // and utility functions on top of the model.    
+    import * as helpers from &apos;./helpers.js&apos;;    
+    // ... 
+&lt;/script&gt;
+</code></pre>   
 
-    // This JUST gets the model to a consistent P3 state
-    import { normalise } from "./normaliser.js" 
+<p>
+    Here's the basic layout of the viewer:</p>
 
-    // And this provides all the helpers, decorators 
-    // and utility functions on top of the model.
-    import * as helpers from './helpers.js';
+<pre><code class="html">&lt;div id=&quot;viewer&quot;&gt;
+    &lt;div id=&quot;th&quot;&gt;&lt;/div&gt;    
+    &lt;div id=&quot;main&quot;&gt;        
+        &lt;div is=&quot;canvas-panel-2&quot; id=&quot;cp&quot; class=&quot;canvaspanel&quot;&gt;&lt;/div&gt;        
+        &lt;div id=&quot;textPanel&quot; class=&quot;text&quot;&gt;Text goes here.&lt;/div&gt;    
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>   
 
-    // ...
+<p>We have a panel to render thumbnails in, a canvas panel, and a panel to render text in. Of course, both the thumbnail panel and text text panel may be components in their own right, like the UV's thumbnail panel. But for now I only want to think about collaboration between CP and the rest of my application; once we've started doing that then the collaboration between those parts of my application that are themselves components may become clearer.</p>
 
- </script>
+<p>The first job of the code is to load the manifest (here the value of an <code>input</code> box), and straight away, normalise it to Presentation 3:</p>
 
-</xmp>
+<pre><code class="javascript">    // fetch the manifest as JSON         
+    let response = await fetch($('mf').value);
+    let raw_manifest = await response.json();
 
-TODO
+    // normalise it
+    manifest = normalise(raw_manifest, options);
+</code></pre>
 
-Walk through how code builds the viewer.
+<p>Then generate the thumbnails. There are all sorts of shortcuts I'm taking here, and things that could be optimised. For example, I am not checking to see if the manifest has alternative ranges that would give me a different ordering of the canvases (most won't). I should really lazy-load the thumbnail images, so only those currently visible in the viewport trigger http requests for thumbnails.</p>
 
-Discuss how await helpers.getTextForCanvasAsHtml(canvas); has a dependency on normalisation too.
+<pre><code class="javascript">
+    manifest.items.forEach(function(cv,i){
+        // some more nice helper methods:
+        let thumb = helpers.getThumbnail(cv);
+        let label = helpers.getString(cv.label);
+        s += `&lt;div class=&quot;tc&quot;&gt;${label}&lt;br/&gt;`;
+        s += `  &lt;img id=&quot;im${i}&quot; data-index=&quot;${i}&quot; src=&quot;${thumb}&quot; /&gt;`;
+        s += `&lt;/div&gt;`;         
+    });
+</code></pre>
 
-See comments in helpers.js
+<p>Armed with my now normalised IIIF (<code>manifest</code>), I can now call my helpers. Again, these are massively simplified versions of what real helpers would do. I've written <a href="http://tomcrane.github.io/iiif-expts/getthumbnail/">elsewhere</a> 
+about thumbnail selection utilities. This one here doesn't let me specify any parameters, and it just returns the URI of the thumbnail image without any additional useful information. Likewise, the <code>getString(..)</code> function is the beginnings of a helper that extracts appropriate display strings from IIIF's JSON-LD Language Maps; you might expect it to take a preferred language parameter, and fallbacks. The two helper calls here are merely to show that this kind of utility is provided by a P3-compliant helper library, not the business logic of my own application. These are useful helpers! Or stubs for what can be useful helpers later. </p>
 
-<p></p>
+<p>When someone clicks a thumbnail:</p>
 
-<p>Event model for hyperlinking:
-    <ul>
-        <li>By default just render them as links and let the be active</li>
-        <li>Consumer can intercept link clicked event, handle it, cancel it, do something else.</li>
-    </ul>
-</p>
+<pre><code class="javascript">
+    function clickThumbnail(){ 
+        canvas = manifest.items[this.getAttribute('data-index')];
+        $('cp').canvas = canvas; 
+        displayText();
+    };
+</code></pre>
 
+<p>The canvas index is stored on the thumbnail. So we just pass the canvas object at that index to the canvas panel component. This seems straightforward, but is it OK to do this? Pass an object to a web component? </p>
+
+<p>The code then calls <code>displayText(..)</code> - which introduces a problem. </p>
+
+<pre><code class="javascript">
+    let textAsHtml = await helpers.getTextForCanvasAsHtml(canvas);
+</code></pre>
+
+<p>This helper method seems straightforward enough. Get me an HTML representation of the text on the canvas. But there are several challenges with it as a library, to help me build a viewer. 
+    </p>
+<ul>
+    <li>The helper will need to evaluate the <code>annotations</code> property of the canvas to see what external annotation lists are available. What if there's more than one? Does it load all, or does it choose? Does it call back to my code, asking for a decision about which one to load?</li>
+    <li>We know that the canvas itself is perfect P3, because we ran it through the normaliser. But the linked annotation list might not be. The helper needs to go and load an external resource and then process it. In this example, it's actually an open annotation (Presentation 2.1) list. This might not matter for the immediate need (generating HTML) but the pattern is going to occur often. The helper library needs to load further IIIF resources, and it may well want to normalise them. The helper library has a dependency on the normaliser. Maybe I can't see this dependency yet, so as the viewer developer it doesn't bother me.</li>
+</ul>
+
+<p>For my deliberately constrained first two requirements I have a CP component, normaliser and helpers that let me do what I need. But I haven't started pushing it yet. As soon as I have more complex demands, the collaboration behaviour gets more complex. </p>
+
+
+<p>On to <a href="collaboration.html">More complex collaboration.</a></p>
 
 <hr/>
 <p><a href="https://github.com/digirati-co-uk/canvas-panel/tree/master/developer-stories">View on GitHub</a></p>
