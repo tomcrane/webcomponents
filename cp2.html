@@ -19,13 +19,20 @@
     
     <p>This example is different. The developer has taken more control of the process, including
         the loading of resources. Obtaining and traversing IIIF resources is done before passing
-         to Canvas Panel for rendering. This Canvas Panel requires a perfectly compliant 
+         to Canvas Panel for rendering. CP knows about Canvases and what to do with their content.
+         It doesn't know about manifests.
+
+         </p>
+         <p>
+          This Canvas Panel requires a perfectly compliant 
          Presentation 3 canvas, so I need to make sure it's in that form before I pass it in. 
          Which means I need visibility of
          some other libraries. For now, we'll use a manifest that I know is valid Presentation 3.
-         This also demonstrates the "developer-friendliness" of Presentation 3, the JSON-LD 
+
+         </p>
+<p><i>This example also demonstrates the "developer-friendliness" of Presentation 3, the JSON-LD 
          quirks aren't visible, the data model is traversed consistently with <code>.items</code>,
-         and so on.
+         and so on.</i>
     </p>
 
 <pre><code class="javascript"> &lt;!-- The v2 Canvas Panel Component --&gt;
@@ -66,9 +73,9 @@
 
     <p><i>(For now, imagine that this a deep zoom interaction.)</i></p>
 
-    <p>That was easy, and it feels more powerful. It's obvious what I'm doing, as a developer. 
+    <p>That was easy, and it feels <b>more powerful</b>. It's obvious what I'm doing, as a developer. 
         I can use the version 1 wrapper around Canvas Panel to embed fragments, but 
-        with this approach I can start to build <i>viewers</i> with not very much code.
+        with this approach I can start to build <i>viewers</i> with not very much code. I can have my cake and eat it.
     </p>
     
     <h3>Controls</h3>
@@ -80,23 +87,24 @@
     <p>Are these part of Canvas Panel? Or do we need to link other components in to do this?
         OpenSeadragon has a similar issue - it provides its own navigation controls; they occupy viewport space.
         They probably don't fit our visual designs, so we want to replace them.
-        The Navigator (picture-in-picture) is also a useful feature.
+        The Navigator (picture-in-picture) of OSD is also a useful feature.
         In some scenarios, I'd like more control over these. But often I want them to be part of 
-        the boxed Canvas Panel component, so that it just works...</p>
+        the black box Canvas Panel component, so that it just works...</p>
     <p>As a developer, I'd prefer not to worry about hooking up that kind of behaviour. Canvas Panel
-        <i>should</i> do this for me, but I would like a lot of control (by passing options? CSS) of the
-        visual appearance and availibility of these controls. Provide new buttons, specifiy their 
-        positions, turn them on and off. The UV does this on top of its OpenSeadragon use.
+        <i>should</i> do this for me, but I would like a lot of control (by passing options? controlling through CSS?) of the
+        visual appearance and availibility of these controls. Such as provide new buttons, specify their 
+        positions, turn them on and off. (The UV does this on top of its OpenSeadragon component.)
     </p>
 
     <p>
         Navigation <i>above</i> the canvas level is not Canvas Panel's concern - IIIF Ranges generating a 
         table of contents are essential features of a larger viewer or containing web page, but they
-        are definitely not part of Canvas Panel. They are other components (and in fact, part of our developer toolkit).
+        are definitely not part of Canvas Panel. They are other components (and in fact, part of our developer toolkit
+        surroundinf Canvas Panel).
         We're focusing on Canvas Panel here, not other IIIF components (a metadata display component is another example).
         But they might need to <i>collaborate</i> with Canvas Panel. If I select a range that's a partial region 
         of a canvas (whether spatial or temporal) Canvas Panel will need to indicate that range.
-
+    </p><p>
         The Universal Viewer does this for temporal ranges. There is collaboration between the canvas scrub indicator,
         the metadata panel, and the table of contents.
 
@@ -104,6 +112,11 @@
         We will return to this in a bit.
     </p>
     
+<p>It's clear there are many components we can use to build viewing experiences, and that these components collaborate.
+    They have application interfaces. My contention is that CP is the most important of these interfaces, as it is where our
+    model of digital objects (IIIF) meets the content of those objects. it's where it all comes together. 
+</p>
+
     
     <p>Now build a simple <a href="viewer1.html">Viewer</a>.</p>
 

@@ -51,3 +51,7 @@ export async function getTextForCanvasAsHtml(canvas){
     }
     return null;
 }
+
+export function getAnnotationCollections(canvas){
+    return canvas.annotations || [];
+}

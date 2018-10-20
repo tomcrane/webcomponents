@@ -24,12 +24,18 @@
         <li><i>Support oa:Choice</i></li> 
         <li><i>Highlight the text on the canvas when I select it in the text panel</i></li> 
         <li><i>Display text transcriptions overlaying the canvas, as an option</i></li> 
+        <li><i>Show other content of the canvas, besides transcriptions (e.g., comments)</i></li> 
     </ol>
 
-    <p>In this section I will take a look at requirements 3-7.</p>
+    <p>In this section I will take a look at requirements 3-8.</p>
 
     <h2>Hyperlinking</h2>
-    <p>IIIF has great potential to encourage the extension of hyperlinking into the digital object. Often a digital object is presented in a black box - the viewer; the web stops at its borders and something else takes over, isolated and disconnected. IIIF makes the digital object and its parts, at any level of granularity, part of the web too. The markup of the web page gives way to a more specialised but in fact simpler markup: the IIIF Presentation model. That model is an assembly of web standards, we don't need to leave hyperlinks at the door.</p>
+    <p>IIIF has great potential to encourage the extension of hyperlinking into the digital object. Often a digital object
+         is presented in a black box - the viewer; the web stops at its borders and something else takes over, 
+         isolated and disconnected. IIIF makes the digital object and its parts, at any level of granularity, 
+         part of the web too. The markup of the web page gives way to a more specialised but in fact simpler markup: 
+         the IIIF Presentation model. That model is an assembly of web standards, we don't need to leave 
+         hyperlinks at the door.</p>
 
     <p>Some examples of hyperlinking in IIIF:</p>
     <ul>
@@ -38,7 +44,8 @@
         <li><a href="https://medium.com/@tom.crane/beyond-the-viewer-fragments-and-links-in-annotation-space-b3284e25f34">Beyond the Viewer</a> includes a section at the end on "hyperlinking the archive".</li>
     </ul>
     <p>
-        A hyperlink in IIIF is just an annotation with the motivation <code>linking. At its simplest it could be a link from a region of a canvas, to another manifest:</code>
+        A hyperlink in IIIF is just an annotation with the motivation <code>linking</code>. At its simplest 
+        it could be a link from a region of a canvas, to another manifest:</code>
     </p>
 
     
@@ -56,7 +63,8 @@
 }
 </code></pre>
 
-<p>Sometimes you might want to link from a region of one canvas in one work to a region of another canvas in another work. This needs a bit more information:</p>
+<p>Sometimes you might want to link from a region of one canvas in one work to a region of another canvas in another work. 
+    This needs a bit more information:</p>
 
 <pre><code class="json">
 {
@@ -82,13 +90,41 @@
 }
 </code></pre>
            
-<p>Neither the W3C or IIIF specifications describe what the user experience of such </p>
+<p>Neither the W3C or IIIF specifications describe what the user experience of such a link is. By default
+    we could let the rendered linking annotation behave as a regular HTML hyperlink - allow the browser behaviour
+to take over.
+</p>
+
+<pre><code class="javascript">
+    location.href = anno.body.id;
+</code></pre>
+
+<p>That would work for some things but not others. Canvas Panel needs to be a bit cleverer than that.
+    If the link is to another IIIF resource, or part of that resource, do we want to
+    load that resource straight into Canvas Panel? Sometimes we might, but for a complex digital object in a viewer, 
+    that won't work; we're more likely to want to re-initialise our viewer with the new manifest and then navigate
+    it to the correct location. In the Galway example the viewer shows an interstitial dialogue, alerting the user
+    to the fact that they are navigating away from the current object, but also offering a preview of that object
+    in-situ. In the Royal Academy example the links are like more conventional web links. They go to parts of web pages,
+    not parts of IIIF resources.
+</p>
+
+<p>I think the most flexible approach is for Canvas Panel to fire an event.</p>
+
 <p>Event model for hyperlinking:
         <ul>
             <li>By default just render them as links and let the be active</li>
             <li>Consumer can intercept link clicked event, handle it, cancel it, do something else.</li>
         </ul>
     </p>
+
+<p>There is a problem with all this. Where did the hyperlinks come from?
+    In the viewer example we were talking about the textual content of canvases, and loading that lazily.
+    But here we would have had to have loaded the annotation collections containing the hyperlinks as aprt of the initialisation
+    of Canvas Panel. 
+
+    ... need to load in advance.
+</p>
 
         
     <hr/>

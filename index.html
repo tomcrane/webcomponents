@@ -21,7 +21,8 @@
 
     <p>I think that there are many components in evidence at
         <a href="https://canvas-panel.digirati.com/styleguide/">https://canvas-panel.digirati.com/styleguide/</a>,
-        above and below the level of <b><i>Canvas Panel</i></b>. I think that the component I'm looking for is somewhere
+        above and below the level of the thing we want to call <b><i>Canvas Panel</i></b> (CP). 
+        I think that the component I'm looking for is somewhere
         around the level of <i><a href="http://canvas-panel.digirati.com/styleguide/#canvasrepresentation">CanvasRepresentation</a></i>
         or <i><a href="http://canvas-panel.digirati.com/styleguide/#viewport">Viewport</a></i> in the current
         implementation. That doesn't mean that I
@@ -32,6 +33,8 @@
     <p>But if I want a multipurpose canvas renderer outside of any particular set of tools or frameworks, that
         will do the heavy lifting of scene evaluation and rendering, what are its interfaces? How do I program against it?
     </p>
+
+    <p>What is useful, and what's just going to get in the way?</p>
 
     <p>The questions I'm trying to answer are:</p>
 
@@ -44,12 +47,18 @@
 
     <p>In other words, can we be sure that our code is in the right places?</p>
 
-    <p>Rather than use the real Canvas Panel, I have a definitely less than MVP Canvas Panel implementation, as a web component. 
-         You'll have to imagine that this component is offering a nice deep zoom interface, is capable of rendering AV,
+    <p>Rather than use the real Canvas Panel, I have a definitely less-than-MVP Canvas Panel implementation, as a web component. 
+         You'll have to imagine that this component renders a nice deep zoom interface, is capable of rendering AV,
         is capable of being given annotations to render, fires events as the user interacts, and so on.
-        This is an exercise in determining the boundaries of the component - what do I need to know about how it works inside, where does the black box begin?</p>
+        This is an exercise in determining the boundaries of the component - what do I need to know about how it works inside, 
+        where does the black box begin?</p>
 
-        <p>I've made CP a web component, because that is a simple way of encapsulating it to think about how I would want to code against it. Obviously this demo is not a good cross-browser solution, there are no polyfills or any concessions to old browsers. I know that it works in Chrome on my machine and probably in Chrome on yours too. </p>
+        <p>I've made CP a web component, because that is a simple way of encapsulating it to 
+            think about how I would want to code against it. It's also a favoured future direction for the
+            Universal Viewer, that CP could fit into nicely. 
+            Obviously this demo is not a 
+            good cross-browser solution, there are no polyfills or any concessions to old browsers. 
+            I know that it works in Chrome on my machine and probably in Chrome on yours too. </p>
 
 
         <p>On to <a href="cp1.html">Version 1</a>.</p>

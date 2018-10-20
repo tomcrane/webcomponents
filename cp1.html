@@ -22,22 +22,53 @@
 <p>First, a <i>Design principle</i> for Canvas Panel: </p>
     
     <blockquote>
-    Work with the latest IIIF specification (Presentation 3) and 
+    Internally, work with the latest IIIF specification (Presentation 3) and 
     <b><i>normalise</i></b> incoming resources to this specification, rather than 
     accommodating different versions of the spec throughout the codebase.
 </blockquote> 
 
-<blockquote>
-    Canvas Panel is to a IIIF Canvas as OSD is to a deep zoom tile source. 
-    (This principle doesn't quite hold; you can pass multiple tile sources to OSD).
-</blockquote>
+<p>
+    Canvas Panel is a component that renders canvases. So, perhaps Canvas Panel
+     is to a IIIF Canvas what OpenSeadragon (OSD) is to a deep zoom tile source. 
+      But this analogy
+     doesn't really stretch very far; you can pass multiple tile sources to OSD, but CP's job is to render 
+     one IIIF Canvas. That Canvas might have other canvases on it, as content. It might be VERY complex. 
+     And, your viewer could use multiple CP instances to render multiple canvases. 
+     But by definition, no matter how complex the canvas is, one CP instance renders <b>one single canvas</b>.
 
+     </p><p>
+A better analogy is an <code>img</code> tag; this only takes one value for <code>src</code>. It has block level layout.
+But this doesn't quite work either. What's the block on the page that Canvas Panel occupies? Is it an exact 
+correspondence with the canvas it is rendering, and therefore of the same proportions? No, I don't think so; even though we 
+only give it one canvas to render, the UI we want is a <i>viewport</i> on that canvas: the block level element on the page
+is a viewport, in which we might zoom in to look at just part of the canvas. That seems to be the most aligned with how
+I would put together a viewer; managing a viewport independent of its content is difficult, you want the black box
+of CP taking care of that.
+</p>
 
-<p>This is how I would want to use CP. I want it to behave like a <code>div</code>, 
-    so I can treat it like other divs in my application, style it, apply predictable 
-    CSS to it, etc. So here the web component is a <i>Customized built-in element</i>, 
-    rather than an <i>Autonomous custom element</i> (following the definitions 
-    given at 
+<p>Having said that, you could use CP in <i>locked</i> mode; where it doesn't support pan and zoom; you set a height and width
+for the element proportional (or even the same as) the Canvas dimensions. This would be better for video, for example.
+It's not incompatible with the notion of a viewport; it's just a locked viewport. So I think the Viewport model is the right
+level for the CP component, the maximum usefulness. CP is a block element that renders a canvas,
+ but there is navigational freedom over the canvas inside that block.
+</p>
+
+<p>So, another <i>Design principle</i> for Canvas Panel: </p>
+    
+    <blockquote>
+    CP is a block level element that renders a viewport on the canvas. In many scenarios this viewport may be fixed.
+</blockquote> 
+
+<p><i>For later consideration: full screen. Sometimes you might want to defer full screen rendering to CP, but other times
+    you might want to carry some of your other UI to full screen mode; i.e., it's the viewer going full screen, not CP.
+    Developers have a similar consideration when using OSD.
+</i></p>
+
+<p>I want CP to behave like a <code>div</code>, 
+    so I can treat it like other <code>div</code>s in my application, style it, apply predictable 
+    CSS to it, etc. As a web component, this feels like a <i>Customized built-in element</i>, 
+    rather than an <i>Autonomous custom element</i> 
+    (following the definitions given at 
     <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements#High-level_view">MDN</a>).
 </p>
 
@@ -67,7 +98,8 @@
         This declarative component would be good for that.
     </p>
 
-    <p>The thing you are setting the size of in the <a href="style-common.css">linked CSS</a> isn't a canvas.
+    <p>As established in the viewport design principle, the thing you are setting
+         the size of in the <a href="style-common.css">linked CSS</a> isn't a canvas.
 
         You probably don't know how big or what shape the canvas is at this point.
         The component is a <b>viewport</b> - the space in which
@@ -117,8 +149,8 @@
         it was visible (usually not) but I'm showing
         it here to indicate the shape of the canvas that is being shown in this viewport.
     </p>
-    <p>While the component shown here would be very useful, <i>I don't think this is Canvas Panel.</i>
-        This feels like a component that's a light wrapper around CP - taking the attributes and then 
+    <p>While the component shown here would be very useful, <i><b>I don't think this is Canvas Panel</b></i>.
+        This feels like a component that's a light <i>wrapper</i> around CP - taking the attributes and then 
         loading the resources, like this:
     </p>
 
@@ -161,7 +193,9 @@
         <a href="https://docs.google.com/document/d/1LKhEWWuYF-8KLkKcW_u2GlvX0epohwc7OYOVjICie5M">Import
             to viewers</a> proposal.</p>
     <p>The <code>iiif-resource-loader</code> web component isn't Canvas Panel, then, but a thin wrapper around it. 
-        A useful component in its own right, but something else. So what is Canvas Panel?</p>
+        A useful component in its own right, but something else.</p>
+        
+        <p>If this isn't Canvas Panel, what is?</p>
 
     <p>On to <a href="cp2.html">Version 2</a></p>
 
