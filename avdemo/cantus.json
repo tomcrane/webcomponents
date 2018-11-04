@@ -1,0 +1,246 @@
+{
+  "@context": [
+    "http://digirati.com/ns/timeliner",
+    "http://www.w3.org/ns/anno.jsonld",
+    "http://iiif.io/api/presentation/3/context.json"
+  ],
+  "id": "http://digirati.com/iiif/v3/temporary/manifest",
+  "type": "Manifest",
+  "label": {
+    "en": [
+      ""
+    ]
+  },
+  "summary": {
+    "en": [
+      ""
+    ]
+  },
+  "items": [
+    {
+      "id": "http://digirati.com/iiif/v3/temporary/canvas/c1",
+      "type": "Canvas",
+      "label": {
+        "en": [
+          "Untitled Item"
+        ]
+      },
+      "items": [
+        {
+          "id": "http://digirati.com/iiif/v3/temporary/list/c1-ap",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "http://digirati.com/iiif/v3/temporary/annot/c1-1",
+              "type": "Annotation",
+              "motivation": "painting",
+              "label": {
+                "en": [
+                  "Untitled audio"
+                ]
+              },
+              "body": {
+                "id": "https://tomcrane.github.io/webcomponents/avdemo/Cantus_In_Memoriam_Benjamin_Britten.mp3",
+                "type": "Audio",
+                "duration": 408.764082
+              },
+              "target": "http://digirati.com/iiif/v3/temporary/canvas/c"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "structures": [
+    {
+      "id": "id-1541347533225",
+      "type": "Range",
+      "label": {
+        "en": [
+          "A range"
+        ]
+      },
+      "summary": {
+        "en": [
+          "This is for demo purposes"
+        ]
+      },
+      "items": [
+        {
+          "id": "id-1541347518331",
+          "type": "Range",
+          "label": {
+            "en": [
+              "To be added"
+            ]
+          },
+          "summary": {
+            "en": [
+              "To be added"
+            ]
+          },
+          "items": [
+            {
+              "id": "http://digirati.com/iiif/v3/temporary/canvas/c1#t=242.689558,396.085067",
+              "type": "Canvas"
+            }
+          ],
+          "tl:backgroundColour": "#A63993"
+        },
+        {
+          "id": "id-1541347550770",
+          "type": "Range",
+          "label": {
+            "en": [
+              "A child range"
+            ]
+          },
+          "summary": {
+            "en": [
+              "for demo"
+            ]
+          },
+          "items": [
+            {
+              "id": "id-1541346897227",
+              "type": "Range",
+              "label": {
+                "en": [
+                  "A further child range"
+                ]
+              },
+              "summary": {
+                "en": [
+                  "demo"
+                ]
+              },
+              "items": [
+                {
+                  "id": "http://digirati.com/iiif/v3/temporary/canvas/c1#t=27.964311660262243,100.510938",
+                  "type": "Canvas"
+                }
+              ],
+              "tl:backgroundColour": "#f5a623"
+            },
+            {
+              "id": "id-1541347544157",
+              "type": "Range",
+              "label": {
+                "en": [
+                  "To be added"
+                ]
+              },
+              "summary": {
+                "en": [
+                  "To be added"
+                ]
+              },
+              "items": [
+                {
+                  "id": "http://digirati.com/iiif/v3/temporary/canvas/c1#t=100.510938,169.951445",
+                  "type": "Canvas"
+                }
+              ],
+              "tl:backgroundColour": "#A63993"
+            }
+          ],
+          "tl:backgroundColour": "#3E3D99"
+        },
+        {
+          "id": "id-1541347514141",
+          "type": "Range",
+          "label": {
+            "en": [
+              "To be added"
+            ]
+          },
+          "summary": {
+            "en": [
+              "To be added"
+            ]
+          },
+          "items": [
+            {
+              "id": "http://digirati.com/iiif/v3/temporary/canvas/c1#t=169.951445,242.689558",
+              "type": "Canvas"
+            }
+          ],
+          "tl:backgroundColour": "#A63993"
+        }
+      ],
+      "tl:backgroundColour": "#417AB0"
+    },
+    {
+      "id": "id-1541346830397",
+      "type": "Range",
+      "label": {
+        "en": [
+          "Bell only"
+        ]
+      },
+      "summary": {
+        "en": [
+          "A tubular bell is struck three times very quietly (pianissimo), with 12 beats between the strikes and gap of 18 beats between the groups of three. \n\nThis bell tells of the death of Britten—it is the funeral bell. It continues to be struck in groups of three widely spaced intervals for most of the piece, fading out for a time in the last 21 bars, only to reappear at the last. "
+        ]
+      },
+      "items": [
+        {
+          "id": "http://digirati.com/iiif/v3/temporary/canvas/c1#t=4.717416,27.964311660262243",
+          "type": "Canvas"
+        }
+      ],
+      "tl:backgroundColour": "#A63993"
+    },
+    {
+      "id": "id-1541347150445",
+      "type": "Range",
+      "label": {
+        "en": [
+          "Bell fades"
+        ]
+      },
+      "summary": {
+        "en": [
+          "At that moment the bell is struck very quietly (pianissimo) so that the striking itself is not heard, but only the reverberations as it dies away. As the final bell toll reverberates, with all other instruments silent, the overtones of the bell become prominently audible – in particular, the fourth overtone[citation needed] (fifth partial), which is the note C-sharp, i.e., the major third of the fundamental pitch (A) of the entire piece. This creates a striking effect, as the entire piece is set in the key of A minor, so that in the dying echoes of the final bell, the last thing the listener hears is actually an A major chord contained within the overtones of the bell. This evokes the common Renaissance and Baroque technique called the \"Picardy third\", in which a piece set in a minor mode or key nonetheless ends on a major chord, evoking a ray of light piercing through the clouds, and suggesting hope, resurrection, or redemption. Here, however, the effect is subtle, because it arises solely from the overtones of a single strike of the bell, rather than from separate instruments or voices."
+        ]
+      },
+      "items": [
+        {
+          "id": "http://digirati.com/iiif/v3/temporary/canvas/c1#t=396.085067,408.764082",
+          "type": "Canvas"
+        }
+      ],
+      "tl:backgroundColour": "#A63993"
+    },
+    {
+      "id": "http://digirati.com/iiif/v3/temporary/range/r0",
+      "type": "Range",
+      "label": {
+        "en": [
+          "Three beats of silence"
+        ]
+      },
+      "summary": {
+        "en": [
+          "Opens with silence"
+        ]
+      },
+      "items": [
+        {
+          "id": "http://digirati.com/iiif/v3/temporary/canvas/c1#t=0,4.717416",
+          "type": "Canvas"
+        }
+      ],
+      "tl:backgroundColour": "#50e3c2"
+    }
+  ],
+  "tl:settings": {
+    "tl:bubblesStyle": "rounded",
+    "tl:blackAndWhite": false,
+    "tl:showTimes": false,
+    "tl:autoScaleHeightOnResize": false,
+    "tl:startPlayingWhenBubbleIsClicked": true,
+    "tl:stopPlayingAtTheEndOfSection": false,
+    "tl:bubbleHeight": 55
+  }
+}
