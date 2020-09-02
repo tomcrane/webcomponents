@@ -110,12 +110,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/ff2085d5-a9c7-412e-9dbe-dda87712228d",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0001.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/ff2085d5-a9c7-412e-9dbe-dda87712228d/full/73,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0001.JP2/full/73,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -154,12 +154,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/ff2085d5-a9c7-412e-9dbe-dda87712228d",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0001.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/ff2085d5-a9c7-412e-9dbe-dda87712228d/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0001.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -197,12 +197,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/f327de6b-06ef-47ec-b98f-ee79c1685393",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0003.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/f327de6b-06ef-47ec-b98f-ee79c1685393/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0003.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -241,12 +241,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/f327de6b-06ef-47ec-b98f-ee79c1685393",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0003.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/f327de6b-06ef-47ec-b98f-ee79c1685393/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0003.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -284,12 +284,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/61ea4035-6dde-4a4a-9ed2-74bf36d32d4c",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0004.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/61ea4035-6dde-4a4a-9ed2-74bf36d32d4c/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0004.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -328,12 +328,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/61ea4035-6dde-4a4a-9ed2-74bf36d32d4c",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0004.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/61ea4035-6dde-4a4a-9ed2-74bf36d32d4c/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0004.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -371,12 +371,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/4ff70079-fac3-4259-814e-021f7dcf43b6",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0005.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/4ff70079-fac3-4259-814e-021f7dcf43b6/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0005.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -415,12 +415,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/4ff70079-fac3-4259-814e-021f7dcf43b6",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0005.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/4ff70079-fac3-4259-814e-021f7dcf43b6/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0005.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -458,12 +458,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/23a8a648-ad8a-4384-8f42-75c1aa5f87ac",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0006.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/23a8a648-ad8a-4384-8f42-75c1aa5f87ac/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0006.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -502,12 +502,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/23a8a648-ad8a-4384-8f42-75c1aa5f87ac",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0006.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/23a8a648-ad8a-4384-8f42-75c1aa5f87ac/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0006.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -545,12 +545,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/fea48aa8-0b2c-45c7-a2c0-c204fe693715",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0007.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/fea48aa8-0b2c-45c7-a2c0-c204fe693715/full/73,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0007.JP2/full/73,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -589,12 +589,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/fea48aa8-0b2c-45c7-a2c0-c204fe693715",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0007.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/fea48aa8-0b2c-45c7-a2c0-c204fe693715/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0007.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -632,12 +632,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/3764dc69-d22e-4f33-8927-4bd232fc5aae",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0008.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/3764dc69-d22e-4f33-8927-4bd232fc5aae/full/73,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0008.JP2/full/73,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -676,12 +676,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/3764dc69-d22e-4f33-8927-4bd232fc5aae",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0008.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/3764dc69-d22e-4f33-8927-4bd232fc5aae/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0008.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -723,12 +723,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/c6ba2b27-2e35-4a33-bbfb-ac305eaf5272",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0009.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/c6ba2b27-2e35-4a33-bbfb-ac305eaf5272/full/100,72/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0009.JP2/full/100,72/0/default.jpg"
           }
         ],
         "height": 2781,
@@ -751,12 +751,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/c6ba2b27-2e35-4a33-bbfb-ac305eaf5272",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0009.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/c6ba2b27-2e35-4a33-bbfb-ac305eaf5272/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0009.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -794,12 +794,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/f14952cd-cba1-4f95-a9cc-481c83f46781",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0010.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/f14952cd-cba1-4f95-a9cc-481c83f46781/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0010.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -838,12 +838,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/f14952cd-cba1-4f95-a9cc-481c83f46781",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0010.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/f14952cd-cba1-4f95-a9cc-481c83f46781/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0010.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -881,12 +881,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/7d40ab21-1a68-4bb2-85a5-555e2e4bafd9",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0011.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/7d40ab21-1a68-4bb2-85a5-555e2e4bafd9/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0011.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -925,12 +925,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/7d40ab21-1a68-4bb2-85a5-555e2e4bafd9",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0011.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/7d40ab21-1a68-4bb2-85a5-555e2e4bafd9/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0011.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -968,12 +968,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/6c655c58-867d-41ff-bf26-d97232fdca4f",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0012.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/6c655c58-867d-41ff-bf26-d97232fdca4f/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0012.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -1012,12 +1012,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/6c655c58-867d-41ff-bf26-d97232fdca4f",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0012.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/6c655c58-867d-41ff-bf26-d97232fdca4f/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0012.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -1055,12 +1055,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/03b29f62-7ff3-4662-ad0d-417c78d3cc97",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0013.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/03b29f62-7ff3-4662-ad0d-417c78d3cc97/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0013.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -1099,12 +1099,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/03b29f62-7ff3-4662-ad0d-417c78d3cc97",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0013.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/03b29f62-7ff3-4662-ad0d-417c78d3cc97/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0013.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -1142,12 +1142,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/5e278251-6b5e-4731-98c8-47c96c02e713",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0014.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/5e278251-6b5e-4731-98c8-47c96c02e713/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0014.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -1186,12 +1186,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/5e278251-6b5e-4731-98c8-47c96c02e713",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0014.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/5e278251-6b5e-4731-98c8-47c96c02e713/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0014.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -1229,12 +1229,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/5faa4bdc-b909-4f92-a243-ff1f2afffaf7",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0015.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/5faa4bdc-b909-4f92-a243-ff1f2afffaf7/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0015.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -1273,12 +1273,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/5faa4bdc-b909-4f92-a243-ff1f2afffaf7",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0015.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/5faa4bdc-b909-4f92-a243-ff1f2afffaf7/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0015.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -1316,12 +1316,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/482f0a30-aaeb-4051-99e0-126f9a937b42",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0016.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/482f0a30-aaeb-4051-99e0-126f9a937b42/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0016.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -1360,12 +1360,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/482f0a30-aaeb-4051-99e0-126f9a937b42",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0016.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/482f0a30-aaeb-4051-99e0-126f9a937b42/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0016.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -1403,12 +1403,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/97c9ee9e-f1e3-4af2-a4dd-97edb0266b66",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0017.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/97c9ee9e-f1e3-4af2-a4dd-97edb0266b66/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0017.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -1447,12 +1447,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/97c9ee9e-f1e3-4af2-a4dd-97edb0266b66",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0017.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/97c9ee9e-f1e3-4af2-a4dd-97edb0266b66/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0017.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -1490,12 +1490,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/e2616033-5268-4b6f-886f-00a5ab48439c",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0018.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/e2616033-5268-4b6f-886f-00a5ab48439c/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0018.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -1534,12 +1534,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/e2616033-5268-4b6f-886f-00a5ab48439c",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0018.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/e2616033-5268-4b6f-886f-00a5ab48439c/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0018.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -1577,12 +1577,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/87dd138d-55d7-4ef4-8fe3-5eff74e23b98",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0019.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/87dd138d-55d7-4ef4-8fe3-5eff74e23b98/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0019.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -1621,12 +1621,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/87dd138d-55d7-4ef4-8fe3-5eff74e23b98",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0019.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/87dd138d-55d7-4ef4-8fe3-5eff74e23b98/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0019.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -1664,12 +1664,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/6f770796-7aeb-46e8-9967-ce1a0ac80a7e",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0020.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/6f770796-7aeb-46e8-9967-ce1a0ac80a7e/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0020.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -1708,12 +1708,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/6f770796-7aeb-46e8-9967-ce1a0ac80a7e",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0020.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/6f770796-7aeb-46e8-9967-ce1a0ac80a7e/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0020.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -1751,12 +1751,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/9121a5a1-e5e9-49a7-876c-4d75d2bc71a0",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0021.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/9121a5a1-e5e9-49a7-876c-4d75d2bc71a0/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0021.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -1795,12 +1795,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/9121a5a1-e5e9-49a7-876c-4d75d2bc71a0",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0021.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/9121a5a1-e5e9-49a7-876c-4d75d2bc71a0/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0021.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -1838,12 +1838,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/1f5aa87c-6c14-410e-a6be-5fbcf7e16389",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0022.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/1f5aa87c-6c14-410e-a6be-5fbcf7e16389/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0022.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -1882,12 +1882,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/1f5aa87c-6c14-410e-a6be-5fbcf7e16389",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0022.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/1f5aa87c-6c14-410e-a6be-5fbcf7e16389/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0022.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -1925,12 +1925,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/259370cc-952e-4b39-b87b-e60333446103",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0023.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/259370cc-952e-4b39-b87b-e60333446103/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0023.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -1969,12 +1969,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/259370cc-952e-4b39-b87b-e60333446103",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0023.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/259370cc-952e-4b39-b87b-e60333446103/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0023.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -2012,12 +2012,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/6a0ed051-201b-49b9-8564-cec7bfa1c8fc",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0024.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/6a0ed051-201b-49b9-8564-cec7bfa1c8fc/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0024.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -2056,12 +2056,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/6a0ed051-201b-49b9-8564-cec7bfa1c8fc",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0024.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/6a0ed051-201b-49b9-8564-cec7bfa1c8fc/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0024.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -2099,12 +2099,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/26043b0a-2e0c-4ebe-b2ff-ac638c36eb0e",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0025.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/26043b0a-2e0c-4ebe-b2ff-ac638c36eb0e/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0025.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -2143,12 +2143,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/26043b0a-2e0c-4ebe-b2ff-ac638c36eb0e",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0025.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/26043b0a-2e0c-4ebe-b2ff-ac638c36eb0e/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0025.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -2186,12 +2186,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/831a54a8-fd79-436b-9be4-f2149a982a15",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0026.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/831a54a8-fd79-436b-9be4-f2149a982a15/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0026.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -2230,12 +2230,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/831a54a8-fd79-436b-9be4-f2149a982a15",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0026.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/831a54a8-fd79-436b-9be4-f2149a982a15/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0026.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -2273,12 +2273,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/5e5e8f4d-7604-4cad-92d0-b10c096fa112",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0027.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/5e5e8f4d-7604-4cad-92d0-b10c096fa112/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0027.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -2317,12 +2317,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/5e5e8f4d-7604-4cad-92d0-b10c096fa112",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0027.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/5e5e8f4d-7604-4cad-92d0-b10c096fa112/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0027.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -2360,12 +2360,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/b2517db9-7c7f-4004-bd1a-dfc4884ac209",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0028.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/b2517db9-7c7f-4004-bd1a-dfc4884ac209/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0028.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -2404,12 +2404,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/b2517db9-7c7f-4004-bd1a-dfc4884ac209",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0028.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/b2517db9-7c7f-4004-bd1a-dfc4884ac209/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0028.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -2447,12 +2447,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/cb77c73f-3b5f-4d9f-9db4-b947cad9a7b1",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0029.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/cb77c73f-3b5f-4d9f-9db4-b947cad9a7b1/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0029.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -2491,12 +2491,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/cb77c73f-3b5f-4d9f-9db4-b947cad9a7b1",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0029.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/cb77c73f-3b5f-4d9f-9db4-b947cad9a7b1/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0029.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -2534,12 +2534,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/b2e5ca11-409a-4625-92f7-e8faa90c62dd",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0030.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/b2e5ca11-409a-4625-92f7-e8faa90c62dd/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0030.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -2578,12 +2578,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/b2e5ca11-409a-4625-92f7-e8faa90c62dd",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0030.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/b2e5ca11-409a-4625-92f7-e8faa90c62dd/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0030.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -2621,12 +2621,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/56455ab2-3eda-4ad8-abf3-b7d1a9914e89",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0031.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/56455ab2-3eda-4ad8-abf3-b7d1a9914e89/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0031.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -2665,12 +2665,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/56455ab2-3eda-4ad8-abf3-b7d1a9914e89",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0031.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/56455ab2-3eda-4ad8-abf3-b7d1a9914e89/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0031.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -2708,12 +2708,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/c391acdb-b9c4-421f-b2c9-5a214b371746",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0032.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/c391acdb-b9c4-421f-b2c9-5a214b371746/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0032.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -2752,12 +2752,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/c391acdb-b9c4-421f-b2c9-5a214b371746",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0032.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/c391acdb-b9c4-421f-b2c9-5a214b371746/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0032.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -2795,12 +2795,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/782ac260-6793-488c-a9c4-6cd2392f32a0",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0033.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/782ac260-6793-488c-a9c4-6cd2392f32a0/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0033.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -2839,12 +2839,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/782ac260-6793-488c-a9c4-6cd2392f32a0",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0033.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/782ac260-6793-488c-a9c4-6cd2392f32a0/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0033.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -2882,12 +2882,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/eead7bff-3157-4cf9-8045-bf16f600b9be",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0034.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/eead7bff-3157-4cf9-8045-bf16f600b9be/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0034.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -2926,12 +2926,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/eead7bff-3157-4cf9-8045-bf16f600b9be",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0034.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/eead7bff-3157-4cf9-8045-bf16f600b9be/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0034.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -2969,12 +2969,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/0d8e1790-29d0-44e6-974a-1ec31dad4f8c",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0035.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/0d8e1790-29d0-44e6-974a-1ec31dad4f8c/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0035.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -3013,12 +3013,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/0d8e1790-29d0-44e6-974a-1ec31dad4f8c",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0035.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/0d8e1790-29d0-44e6-974a-1ec31dad4f8c/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0035.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -3056,12 +3056,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/5d4f42de-db46-4fd0-a1a4-db4153c27205",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0036.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/5d4f42de-db46-4fd0-a1a4-db4153c27205/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0036.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -3100,12 +3100,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/5d4f42de-db46-4fd0-a1a4-db4153c27205",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0036.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/5d4f42de-db46-4fd0-a1a4-db4153c27205/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0036.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -3143,12 +3143,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/b10fa692-b92a-472f-8f22-39dfa7a5534b",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0037.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/b10fa692-b92a-472f-8f22-39dfa7a5534b/full/72,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0037.JP2/full/72,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -3187,12 +3187,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/b10fa692-b92a-472f-8f22-39dfa7a5534b",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0037.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/b10fa692-b92a-472f-8f22-39dfa7a5534b/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0037.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
@@ -3230,12 +3230,12 @@
                 "profile": [
                   "http://iiif.io/api/image/2/level0.json"
                 ],
-                "id": "https://dlcs.io/thumbs/wellcome/1/67907d59-3167-41bf-a425-cf5369a84575",
+                "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0002.JP2",
                 "type": "ImageService2"
               }
             ],
             "type": "Image",
-            "id": "https://dlcs.io/thumbs/wellcome/1/67907d59-3167-41bf-a425-cf5369a84575/full/73,100/0/default.jpg"
+            "id": "https://dlcs.io/thumbs/wellcome/5/b18035723_0002.JP2/full/73,100/0/default.jpg"
           }
         ],
         "seeAlso": [
@@ -3274,12 +3274,12 @@
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dlcs.io/iiif-img/wellcome/1/67907d59-3167-41bf-a425-cf5369a84575",
+                      "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0002.JP2",
                       "type": "ImageService2"
                     }
                   ],
                   "type": "Image",
-                  "id": "https://dlcs.io/iiif-img/wellcome/1/67907d59-3167-41bf-a425-cf5369a84575/full/!1024,1024/0/default.jpg"
+                  "id": "https://dlcs.io/iiif-img/wellcome/5/b18035723_0002.JP2/full/!1024,1024/0/default.jpg"
                 }
               }
             ],
